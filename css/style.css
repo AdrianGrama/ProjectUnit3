@@ -1,0 +1,215 @@
+* {
+  font-family: "Merriweather", serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #785050;
+}
+
+header,
+.signupHeader,
+.signupForm #contact,
+.signupForm #newsletter,
+footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  flex-direction: row;
+  justify-content: center;
+  background: #945a48;
+  text-align: center;
+}
+
+header h2 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+}
+
+main {
+  padding: 15px 20px;
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  background: #521f1f;
+}
+
+.signupHeader {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #521f1f;
+  border-bottom: 4px solid #2d3945;
+}
+
+.signupHeader h1 {
+  color: #b7d3ef;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.signupHeader p {
+  color: #acb1b5;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.signupForm #contact legend,
+.signupForm #newsletter legend {
+  margin: 2px 0 25px;
+  border-top: 2px solid #2d3945;
+  width: 100%;
+  text-align: left;
+  padding: 20px 0 0;
+  font-size: 18px;
+  color: #2d3945;
+  font-weight: 700;
+}
+
+.signupForm #contact,
+.signupForm #newsletter {
+  border: none;
+  align-items: center;
+  padding: 0;
+  margin: 2px 0 15px;
+}
+
+.signupForm #contact input,
+.signupForm #contact label,
+.signupForm #contact select {
+  flex: 0 100%;
+  transition: all 0.5s ease-out;
+}
+
+.signupForm #contact #zip {
+  flex: 0 50%;
+  min-width: 0;
+}
+
+.signupForm #newsletter legend {
+  margin-bottom: 0px;
+}
+
+.signupForm #contact label {
+  margin-bottom: 10px;
+}
+
+.signupForm #contact label,
+.signupForm #newsletter label {
+  color: #4e6174;
+  font-size: 14px;
+}
+
+.signupForm #contact input,
+.signupForm #contact select {
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #eff0f1;
+  border: 0;
+  border-radius: 3px;
+}
+
+.signupForm input:focus,
+.signupForm select:focus,
+.signupForm textarea:focus {
+  outline-color: #46698b;
+}
+
+.signupForm #contact input::placeholder,
+.signupForm #newsletter textarea::placeholder {
+  font-style: italic;
+  color: #b4b9bd;
+}
+
+.signupForm #contact input[required]::placeholder {
+  text-align: right;
+}
+
+.signupForm #contact select option:disabled {
+  color: #b4b9bd;
+}
+
+#newsletter label {
+  flex: 0 100%;
+  margin: 15px 0;
+}
+
+#newsletter input + label[for] {
+  flex: 0 0 calc(100% - 20px);
+  padding-left: 10px;
+  margin: unset;
+}
+
+#newsletter input {
+  flex: none;
+  height: 12px;
+  width: 12px;
+  min-width: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#newsletter textarea {
+  background: #eff0f1;
+  border: 0;
+  border-radius: 3px;
+  width: 100%;
+  height: 100px;
+  padding: 15px;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  width: 100%;
+  padding: 15px 0;
+  color: #ffffff;
+  background: #7b635a;
+  border-radius: 3px;
+  border: 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+footer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer p {
+  font-style: italic;
+  color: #b4b9bd;
+}
+
+@media only screen and (min-width: 768px) {
+  #signupHeader h1 {
+    font-size: 24px;
+  }
+
+  main,
+  .signupForm #contact legend,
+  .signupForm #newsletter legend {
+    padding-top: 40px;
+  }
+
+  .signupForm #contact input,
+  .signupForm #contact select {
+    flex: 0 79%;
+  }
+
+  .signupForm #contact label {
+    flex: 0 20%;
+  }
+
+  .signupForm #contact #zip {
+    flex: 0 25%;
+  }
+}
